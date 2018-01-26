@@ -2,14 +2,14 @@
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2 md-truncate flex>Contacts</h2>
-      <md-button class="md-accent">
+      <md-button class="md-accent" ng-click="contacts.showList()">
         All contacts
       </md-button>
     </div>
   </md-toolbar>
   <md-content>
     <ui-view></ui-view>
-    <md-button class="md-fab add-fab">
+    <md-button class="md-fab add-fab" ng-click="contacts.add()">
       <md-tooltip md-direction="left">Add new contact</md-tooltip>
       <md-icon>add</md-icon>
     </md-button>

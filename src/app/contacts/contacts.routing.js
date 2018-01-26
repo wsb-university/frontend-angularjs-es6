@@ -7,4 +7,10 @@ export const routing = ($urlRouterProvider, $locationProvider, $stateProvider) =
     url: '/contacts/list',
     component: 'contactsList',
   });
+
+  $stateProvider.state({
+    name: 'add',
+    url: '/contacts/add',
+    component: 'addContact',
+  });
 };
