@@ -13,4 +13,10 @@ export const routing = ($urlRouterProvider, $locationProvider, $stateProvider) =
     url: '/contacts/add',
     component: 'addContact',
   });
+
+  $stateProvider.state({
+    name: 'edit',
+    url: '/contacts/edit/:id',
+    component: 'editContact',
+  });
 };
