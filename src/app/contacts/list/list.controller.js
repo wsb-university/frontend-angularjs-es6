@@ -4,4 +4,14 @@ export class ContactsListController {
     this.contactsService = contactsService;
     this.contacts = contactsService.contacts;
   }
+
+  edit = contact => {
+    this.$state.go('edit', {
+      id: contact.id,
+    });
+  };
+
+  delete = id => {
+    this.contactsService.delete(id);
+  };
 }

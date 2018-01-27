@@ -1,5 +1,5 @@
 <md-list>
-  <md-list-item>
+  <md-list-item ng-repeat="contact in list.contacts | orderBy:'name'">
     <div class="avatar">
       <md-icon class="icon md-accent">person</md-icon>
     </div>
@@ -14,14 +14,14 @@
       </md-button>
       <md-menu-content width="4">
         <md-menu-item>
-          <md-button class="md-accent">
+          <md-button class="md-accent" ng-click="list.edit(contact)">
             <md-icon>edit</md-icon>
             Edit
           </md-button>
         </md-menu-item>
         <md-menu-divider></md-menu-divider>
         <md-menu-item>
-          <md-button class="md-warn">
+          <md-button class="md-warn" ng-click="list.delete(contact.id)">
             <md-icon>delete</md-icon>
             Delete
           </md-button>

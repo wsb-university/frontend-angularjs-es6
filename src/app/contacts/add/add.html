@@ -5,27 +5,27 @@
     </md-card-header-text>
   </md-card-header>
   <md-card-content>
-    <form>
+    <form ng-submit="add.add()">
       <div layout="row" layout-align="center center">
         <md-input-container flex>
           <label>Name</label>
-          <input type="text">
+          <input type="text" ng-model="add.name">
         </md-input-container>
       </div>
       <div layout="row" layout-align="center center">
         <md-input-container flex>
           <label>Phone</label>
-          <input type="text">
+          <input type="text" ng-model="add.phone">
         </md-input-container>
       </div>
       <div layout="row" layout-align="center center">
-        <md-button type="submit" class="md-primary">
+        <md-button type="submit" class="md-primary" ng-click="add.add()">
           add contact
         </md-button>
-        <md-button type="reset" class="md-accent">
+        <md-button class="md-accent" ng-click="add.reset()">
           clear
         </md-button>
-        <md-button type="reset" class="md-warn">
+        <md-button type="reset" class="md-warn" ng-click="edit.back()">
           go back
         </md-button>
       </div>
