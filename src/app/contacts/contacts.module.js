@@ -2,6 +2,7 @@ import {module} from 'angular';
 import {ContactsComponent} from './contacts.component';
 import {contactsListModule} from './list/list.module';
 import {addContactModule} from './add/add.module';
+import {ContactsService} from './contacts.service';
 import {routing} from './contacts.routing';
 
 export const contactsModule = module('app.contacts', [
@@ -10,3 +11,4 @@ export const contactsModule = module('app.contacts', [
 ])
   .component('contacts', new ContactsComponent())
   .config(routing)
+  .service('contactsService', ContactsService);
